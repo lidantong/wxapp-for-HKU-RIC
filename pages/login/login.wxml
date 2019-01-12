@@ -1,0 +1,43 @@
+<!--pages/login/login.wxml-->
+<!-- <text>pages/login/login.wxml</text> -->
+<!-- <form catchsubmit="formSubmit" catchreset="formReset"> -->
+<form catchsubmit='formSubmit' catchreset="formReset">
+  <view class="page-section page-section-gap">
+    <view class="weui-cells__title">请输入你的Portal账号</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" auto-focus placeholder="请输入你的Portal账号" name='id'/>
+      </view>
+    </view>
+  </view>
+    <view class="page-section page-section-gap">
+    <view class="weui-cells__title">请输入你的Portal密码</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" password type="text" placeholder="请输入你的Portal密码" name='password' />
+      </view>
+    </view>
+  </view>
+
+  <view class="page-section page-section-gap">
+    <view class="weui-cells__title">你想要查询的学期</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">当前选择</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindPickerChange" value="{{index*6 + 86}}" range="{{array}}" name='sem'>
+            <view class="weui-input">{{array[index]}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="btn-area">
+    <button class='gap1 gap2' type="primary" formType="submit">Submit</button>
+    <button class='gap2' formType="reset">Reset</button>
+  </view>
+</form>

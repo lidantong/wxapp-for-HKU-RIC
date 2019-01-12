@@ -1,0 +1,15 @@
+/* pages/login/login.wxss */
+@import '../lib/lib.wxss'
+.picker{
+  padding: 19rpx 26rpx;
+  background-color: #FFFFFF;
+}
+.page-section-gap{
+  padding-top: 20rpx;
+}
+.gap1{
+  margin-top: 80rpx;
+}
+.gap2{
+  height: 100rpx;
+}
