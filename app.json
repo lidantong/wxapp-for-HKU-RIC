@@ -4,7 +4,7 @@
     "pages/logs/logs",
     "pages/login/login",
     "pages/results/results",
-    "pages/temp/temp"
+    "pages/ERR/ERR"
   ],
   "window": {
     "backgroundTextStyle": "light",

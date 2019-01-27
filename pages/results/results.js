@@ -5,15 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    inf: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  // onLoad: function (options) {
 
-  },
+  // },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -65,14 +65,16 @@ Page({
   },
 
   onLoad: function(){
+    let this1 = this
     wx.getStorage({
-      key: 'cargo',
-      success: function (res) {
+      key: 'info',
+      success(res) {
         // console.log(res.data)
         // var d = res.data
-        var query = wx.createSelectorQuery();
-        var view = query.select('view');
-        view.text = res.data;
+        // var query = wx.createSelectorQuery();
+        // var view = query.select('#imp');
+        // view.text: res.data;   
+        this1.setData({inf : res.data})
       } 
   })
   }

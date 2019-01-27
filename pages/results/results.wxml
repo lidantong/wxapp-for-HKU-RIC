@@ -1,4 +1,4 @@
 <!--pages/results/results.wxml-->
 <!-- <text>pages/results/results.wxml</text> -->
 
-<view></view>
+<view id='imp'>{{inf}}</view>

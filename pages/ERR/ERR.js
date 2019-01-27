@@ -1,4 +1,4 @@
-// pages/temp/temp.js
+// pages/ERR/ERR.js
 Page({
 
   /**
@@ -62,15 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  data: {
-    Imgurls: ['../../images/1.jpg', '../../images/2.jpg', '../../images/3.jpg'],
-    indicatorDots: true,
-    vertical: false,
-    autoplay: true,
-    interval: 2000,
-    duration: 500
-  },
-
+  }
 })

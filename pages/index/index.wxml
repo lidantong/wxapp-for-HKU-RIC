@@ -9,6 +9,6 @@
   </view>
   <view class="usermotto">
     <!-- <button type="primary">页面主操作 Normal</button> -->
-    <button type='primary' class="user-motto" bindtap='navigateTo'>{{motto}}</button>
+    <button type='primary' class="user-motto" bindtap='navigateTo' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>{{motto}}</button>
   </view>
 </view>

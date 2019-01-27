@@ -77,18 +77,24 @@ Page({
   },
 
   formSubmit(e) {
-    // console.log('form发生了submit事件，携带数据为：', e.detail)
+    console.log('form发生了submit事件，携带数据为：', e.detail)
+    wx.showToast({
+      title: 'loading',
+      icon: 'loading',
+      duration: 20000
+    }),
     wx.request({
-      url: 'http://68.183.100.245/gpa',
+      url: 'http://222.178.8.39:8000/gpa',
       data: {
-        'username':'{{e.detail.value.id}}',
-        'password':'{{e.detail.value.password}}',
-        'sem':e.detail.value.sem
+        'username':e.detail.value.username,
+        'password':e.detail.value.password
+        // 'sem':e.detail.value.sem
       },
-      header: {},
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        // responseType: 'text'
+        },
       method: 'POST',
-      dataType: 'x-www-form-urlencoded',
-      responseType: 'text',
       success: function(res) {
         var info = res.data;
         wx.setStorage({
@@ -100,17 +106,17 @@ Page({
           // 到底怎么才能把数据带着走？？？？？？？？？？？？？？？？？
         })
       },
-      // fail: function(res) {},
+      fail: function(res) {
+        wx.navigateTo({
+          url: '../ERR/ERR'
+        })
+      },
       // complete: function(res) {},
-    })
-
-    wx.navigateTo({
-      url: '../temp/temp',
     })
   },
 
   formReset(e) {
-    console.log('form发生了reset事件，携带数据为：', e.detail.value)
+    // console.log('form发生了reset事件，携带数据为：', e.detail.value)
     this.setData({
       chosen: ''
     })

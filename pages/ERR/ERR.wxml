@@ -1,0 +1,7 @@
+<view class="icon-box">
+    <icon class="icon-box-img" type="warn" size="93"></icon>
+    <view class="icon-box-ctn">
+      <view class="icon-box-title">ERROR</view>
+      <view class="icon-box-desc">请重新尝试或联系RIC管理人员</view>
+    </view>
+  </view>
